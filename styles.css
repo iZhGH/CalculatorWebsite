@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1.2rem "Fira Sans",sans-serif;
+}
+.calculatorFrame {
+    height: 100vh;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gainsboro;
+    max-width: 800px;
+}
+
+.calculatorBody {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+}
+
+.calculatorDisplay {
+    border-style: solid;
+    margin: 10px;
+    background-color: white;
+    text-align: right;
+  
+}
+
+.displayText {
+    font-size: 100px;
+}
+
+
+.calculatorButtons0 {
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    align-items: end;
+    margin: 10px;
+    flex-wrap: true;
+   
+}
+
+.calculatorButtons1 {
+    flex-direction: row-reverse;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    gap: 5px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    background-color: orange;
+}
+
+button:hover{
+    background-color: orangered;
+    transition: 0.05s;
+}
+
+.fakeCompanyTag:active {
+    outline: none;
+}
+
+.clearButton button {
+    width: 180px;
+}
+
+.fakeCompanyTag > button {
+    font-size: 35px;
+    height: 100px;
+    width: 475px;
+    background-color: lightblue;
+    border-radius: 10px;
+    border-color: green;
+
+}
