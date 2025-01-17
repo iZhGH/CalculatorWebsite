@@ -1,3 +1,14 @@
+document.addEventListener("click", () => {
+    if (e.target.classList.contains("companyTagContent")) {
+        return;
+    }
+    else {
+        let displayContent = e.target.textContent;
+        populateDisplay(displayContent);
+    }
+})
+
+let updateDisplay;
 let firstNumber;
 let secondNumber;
 let operation;
@@ -43,4 +54,10 @@ function operate(operation, firstNumber, secondNumber) {
     else {
         console.log("Error occured on operate();")
     }
+}
+
+
+function populateDisplay (content) {
+    
+
 }
