@@ -1,9 +1,9 @@
 document.addEventListener("click", () => {
-    if (e.target.classList.contains("companyTagContent")) {
+    if ((event.target.tagName.toLowerCase() != "button") || (event.target.classList.contains("companyTagContent"))) {
         return;
     }
     else {
-        let displayContent = e.target.textContent;
+        let displayContent = event.target.textContent;
         populateDisplay(displayContent);
     }
 })
@@ -12,7 +12,7 @@ let updateDisplay;
 let firstNumber;
 let secondNumber;
 let operation;
-
+let display = document.querySelector(".displayText");
 
 // OPERATIONS
 function add (num1,num2) {
@@ -58,5 +58,7 @@ function operate(operation, firstNumber, secondNumber) {
 
 
 function populateDisplay (content) {
- updateDisplay = document.query
+const escapedClass = CSS.escape(content);
+ updateDisplay = document.querySelector(`.${escapedClass}`)
+ display.textContent = content;
 }
