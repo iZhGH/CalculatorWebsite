@@ -58,6 +58,5 @@ function operate(operation, firstNumber, secondNumber) {
 
 
 function populateDisplay (content) {
-    
-
+ updateDisplay = document.query
 }
