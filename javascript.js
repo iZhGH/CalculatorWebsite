@@ -6,6 +6,7 @@ let display = document.querySelector(".displayText");
 let numButtons = document.querySelectorAll(".number");
 let opButtons = document.querySelectorAll(".operations");
 let enterButton = document.querySelectorAll(".enter");
+let clearButton = document.querySelectorAll(".AC");
 
 
 numButtons.forEach((number) => number.addEventListener("click", () => {
