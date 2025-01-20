@@ -62,8 +62,6 @@ console.log(divide(3,3));
 
 
 
-
-
 function populateNumbers (content) {
     if (currentValue.length <= 10) {
         if (firstNumberEntered == true) {
@@ -103,7 +101,11 @@ function populateNumbers (content) {
     console.log(currentValue);
     previousValue = Number(previousValue);
     currentValue = Number(currentValue);
-    if (operationInp == "+") {
+    if (previousValue == "") {
+        display.textContent = "Error! Please AC"
+        
+    }
+   else if (operationInp == "+") {
         finalAnswer = add(previousValue,currentValue);
         display.textContent = finalAnswer;
         
