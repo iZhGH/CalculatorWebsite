@@ -1,31 +1,15 @@
 document.addEventListener("click", () => {
-        if (event.target.tagName.toLowerCase() !== "button" ||
-       // event.target.classList.contains("AC") ||
-        event.target.classList.contains("enter") ||
-        overflowStatus == true || 
-        event.target.classList.contains("operations"))
-        {
-        return;
-    }
-    else if(event.target.classList.contains("AC")) {
-        display.textContent = "";
-        overflowStatus = false;
-        displayString = "";
-    }
-    else {
-        let displayContent = event.target.textContent;
-        populateDisplay(displayContent);
-    }
-})
+    let displayContent = event.target.textContent;
+
+
+});
 
 let updateDisplay;
 let firstNumber;
 let secondNumber;
 let operation;
 let display = document.querySelector(".displayText");
-let operationChosen = false;
-let displayString = "";
-let overflowStatus = false;
+
 
 
 // OPERATIONS
@@ -72,20 +56,7 @@ function operate(operation, firstNumber, secondNumber) {
 
 
 function populateDisplay (content) {
-const escapedClass = CSS.escape(content);
- updateDisplay = document.querySelector(`.${escapedClass}`)
- 
- 
- if (displayString.length > 10) {
-    display.textContent = "";
-    display.textContent = "You broke me!";
-    overflowStatus = true;
-    displayString = ""; 
- }
- else {
- display.textContent += content;
- displayString += content;
- console.log(displayString);
- }
 
-}
+
+ 
+ }
