@@ -1,5 +1,4 @@
-let firstNumber;
-let secondNumber;
+let enteredNumber = "";
 let operation;
 let display = document.querySelector(".displayText");
 
@@ -11,10 +10,13 @@ let clearButton = document.querySelectorAll(".AC");
 
 numButtons.forEach((number) => number.addEventListener("click", () => {
     let displayContent = event.target.textContent;
-    populateDisplay(displayContent);
+    populateNumbers(displayContent);
 
 }));
 
+opButtons.forEach((operation) => operation.addEventListener("click", () => {
+    populateOperations(operation);
+}))
 
 
 
@@ -63,8 +65,15 @@ function operate(operation, firstNumber, secondNumber) {
 }
 
 
-function populateDisplay (content) {
-    display.textContent += content;
+function populateNumbers (content) {
+    if (enteredNumber.length <= 10) {
 
- 
+    
+    display.textContent += content;
+    enteredNumber += content;
+    }
+ }
+
+ function populateOperations (operation) {
+
  }
