@@ -1,7 +1,7 @@
 let currentValue ="";
 let previousValue = "";
 let equationCompleted = false;
-
+let dec;
 let firstNumber;
 let firstNumberEntered = false;
 let secondNumber;
@@ -50,7 +50,9 @@ return num1 * num2
 }
 
 function divide (num1,num2) {
-return num1 / num2
+ dec = num1 / num2
+ console.log(dec);
+ return dec.toFixed(5);
 }
 
 console.log(add(3,3));
