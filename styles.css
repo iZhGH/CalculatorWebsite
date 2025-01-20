@@ -1,89 +1,83 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: 1.2rem "Fira Sans",sans-serif;
+   background-color: burlywood;
+}
+
+.alert {
+    text-align: center;
+    font-size: 25px;
 }
 .calculatorFrame {
-    height: 100vh;
-    border-color: black;
-    border-width: 5px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 25px;
+    border-width: 3.5px;
     border-style: solid;
-    border-radius: 10px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: gainsboro;
-    max-width: 800px;
-}
-
-.calculatorBody {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-
+    background-color: gray;
+    gap: 10px;
 }
 
 .calculatorDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 5px;
     border-style: solid;
+    border-width: 3px;
     margin: 10px;
-    background-color: white;
     text-align: right;
-  
+    min-width: 450px;
+    font-size: 50px;
+    background-color: rgb(131, 164, 131);
+    max-height: 158px;
+    margin-top: 25px;
 }
 
-.displayText {
-    font-size: 100px;
+.calculatorDisplay p {
+    padding-right: 15px;
+    font-size: 75px;
+    color: black;
+    font-weight: bold;
+
 }
 
+.AC {
+    background-color: rgb(182, 46, 46);
 
-.calculatorButtons0 {
-    display: flex;
-    gap: 5px;
-    justify-content: end;
-    align-items: end;
-    margin: 10px;
-    flex-wrap: true;
-   
 }
 
-.calculatorButtons1 {
-    flex-direction: row-reverse;
-    justify-self: flex-end;
-    display: flex;
-    justify-content: end;
-    margin: 10px;
-    gap: 5px;
+.enter {
+    background-color: rgb(221, 155, 33);    
+}
+
+.operations {
+    background-color: darkslategrey;
 }
 
 button {
     height: 100px;
     width: 100px;
-    font-size: 50px;
-    background-color: orange;
-}
-
-button:hover{
-    background-color: orangered;
-    transition: 0.05s;
-}
-
-.fakeCompanyTag:active {
-    outline: none;
-}
-
-.clearButton button {
-    width: 180px;
-}
-
-.fakeCompanyTag > button {
-    font-size: 35px;
-    height: 100px;
-    width: 475px;
-    background-color: lightblue;
+    font-size: 25px;
     border-radius: 10px;
-    border-color: green;
+    margin: 2px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+
+}
+
+button:hover {
+    background-color: white;
+    transition-duration: 0.45s;
+    color: black;
+}
+.calculatorButtons {
+   margin-bottom: 10px;
+   
+  
 
 }

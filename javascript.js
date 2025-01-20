@@ -1,8 +1,8 @@
 document.addEventListener("click", () => {
         if (event.target.tagName.toLowerCase() !== "button" ||
-        event.target.classList.contains("companyTagContent") ||
-        event.target.classList.contains("clear") ||
-        event.target.classList.contains("enter"))
+        event.target.classList.contains("AC") ||
+        event.target.classList.contains("enter") || 
+        event.target.classList.contains("operations"))
         {
         return;
     }
