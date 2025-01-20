@@ -1,14 +1,21 @@
-document.addEventListener("click", () => {
-    let displayContent = event.target.textContent;
-
-
-});
-
-let updateDisplay;
 let firstNumber;
 let secondNumber;
 let operation;
 let display = document.querySelector(".displayText");
+
+let numButtons = document.querySelectorAll(".number");
+let opButtons = document.querySelectorAll(".operations");
+let enterButton = document.querySelectorAll(".enter");
+
+
+document.addEventListener("click", () => {
+    let displayContent = event.target.textContent;
+    populateDisplay(displayContent);
+
+});
+
+
+
 
 
 
@@ -56,7 +63,7 @@ function operate(operation, firstNumber, secondNumber) {
 
 
 function populateDisplay (content) {
-
+    display.textContent = content;
 
  
  }
