@@ -1,7 +1,12 @@
+let currentValue ="";
+let previousValue = "";
+let equationCompleted = false;
+
 let firstNumber;
 let firstNumberEntered = false;
 let secondNumber;
 let enteredNumber = "";
+let finalAnswer;
 let operationInp;
 let display = document.querySelector(".displayText");
 
@@ -22,6 +27,9 @@ opButtons.forEach((operation) => operation.addEventListener("click", () => {
     populateOperations(operatorContent);
 }))
 
+enterButton.forEach((enter) => enter.addEventListener("click", () => {{
+    enterPressed();
+}}));
 
 
 
@@ -70,28 +78,68 @@ function operate(operation, firstNumber, secondNumber) {
 
 
 function populateNumbers (content) {
-    if (enteredNumber.length <= 10) {
+    if (currentValue.length <= 10) {
         if (firstNumberEntered == true) {
-            enteredNumber = "";
             display.textContent = "";
             display.textContent += content;
             firstNumberEntered = false;
+            currentValue += content;
             
         }
-
-    
-    display.textContent += content;
-    enteredNumber += content;
+ else {display.textContent += content;
+    currentValue += content;
+ }
     }
 
 
  }
 
  function populateOperations (operation) {
-    firstNumber = enteredNumber;
-    enteredNumber = "";
+    if (equationCompleted == false) {
+    previousValue = currentValue;
+    currentValue = "";
     display.textContent = operation;
     firstNumberEntered = true;
     operationInp = operation;
+    }
+    else {
+        currentValue = "";
+    display.textContent = operation;
+    firstNumberEntered = true;
+    operationInp = operation;
+    }
+
+ }
+
+ function enterPressed() {
+    console.log(previousValue);
+    console.log(currentValue);
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+    if (operationInp == "+") {
+        finalAnswer = add(previousValue,currentValue);
+        display.textContent = finalAnswer;
+        
+    }
+    else if (operationInp == "-") {
+        finalAnswer = subtract(previousValue,currentValue);
+        display.textContent = finalAnswer;
+       
+    }
+    else if (operationInp == "x") {
+        finalAnswer =  multiply(previousValue,currentValue);
+        display.textContent = finalAnswer;
+        
+    }
+    else if (operationInp == "/") {
+        finalAnswer =  divide(previousValue,currentValue);
+        display.textContent = finalAnswer;
+        
+    }
+    previousValue = finalAnswer;
+    currentValue = "";
+    firstNumberEntered = true;
+    equationCompleted = true;
+    
 
  }
