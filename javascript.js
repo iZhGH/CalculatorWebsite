@@ -31,9 +31,10 @@ enterButton.forEach((enter) => enter.addEventListener("click", () => {{
     enterPressed();
 }}));
 
+clearButton.forEach((cleared) => cleared.addEventListener("click", () => {{
+    clearDisplay();
 
-
-
+}}));
 // OPERATIONS
 function add (num1,num2) {
 return  num1 + num2
@@ -142,4 +143,11 @@ function populateNumbers (content) {
     equationCompleted = true;
     
 
+ }
+
+ function clearDisplay() {
+    display.textContent = "";
+    previousValue = "";
+    currentValue = "";
+    equationCompleted = false;
  }
