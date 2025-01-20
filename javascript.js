@@ -1,5 +1,8 @@
+let firstNumber;
+let firstNumberEntered = false;
+let secondNumber;
 let enteredNumber = "";
-let operation;
+let operationInp;
 let display = document.querySelector(".displayText");
 
 let numButtons = document.querySelectorAll(".number");
@@ -15,7 +18,8 @@ numButtons.forEach((number) => number.addEventListener("click", () => {
 }));
 
 opButtons.forEach((operation) => operation.addEventListener("click", () => {
-    populateOperations(operation);
+    let operatorContent = event.target.textContent;
+    populateOperations(operatorContent);
 }))
 
 
@@ -67,13 +71,27 @@ function operate(operation, firstNumber, secondNumber) {
 
 function populateNumbers (content) {
     if (enteredNumber.length <= 10) {
+        if (firstNumberEntered == true) {
+            enteredNumber = "";
+            display.textContent = "";
+            display.textContent += content;
+            firstNumberEntered = false;
+            
+        }
 
     
     display.textContent += content;
     enteredNumber += content;
     }
+
+
  }
 
  function populateOperations (operation) {
+    firstNumber = enteredNumber;
+    enteredNumber = "";
+    display.textContent = operation;
+    firstNumberEntered = true;
+    operationInp = operation;
 
  }
