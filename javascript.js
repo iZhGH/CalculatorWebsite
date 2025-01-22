@@ -100,7 +100,8 @@ function populateNumbers (content) {
     previousValue = Number(previousValue);
     currentValue = Number(currentValue);
     if (previousValue == "") {
-        display.textContent = "Error! Please AC"
+        display.style.fontSize = "35px";
+        display.textContent = "Error! Please AC";
         
     }
    else if (operationInp == "+") {
@@ -127,13 +128,14 @@ function populateNumbers (content) {
     currentValue = "";
     firstNumberEntered = true;
     equationCompleted = true;
-    
 
  }
 
  function clearDisplay() {
+    display.removeAttribute("style");
     display.textContent = "";
     previousValue = "";
     currentValue = "";
     equationCompleted = false;
+    display.style.fontSize = "75px";
  }

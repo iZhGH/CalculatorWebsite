@@ -7,6 +7,7 @@ body {
     font-size: 25px;
 }
 .calculatorFrame {
+    overflow: hidden;
     max-width: 500px;
     margin: auto;
     margin-top: 100px;
@@ -33,7 +34,6 @@ body {
     border-color: white;
     margin: 10px;
     text-align: right;
-    font-size: 50px;
     background-color: rgb(19, 42, 71);
     max-height: 158px;
     margin-top: 25px;
