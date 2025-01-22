@@ -1,5 +1,5 @@
 body {
-   background-color: burlywood;
+   background-color: rgb(255, 255, 255);
 }
 
 .alert {
@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: gray;
+    background-color: rgb(22, 22, 22);
     gap: 10px;
 }
 
@@ -27,12 +27,13 @@ body {
     justify-content: end;
     border-radius: 5px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 0.5px;
+    border-color: white;
     margin: 10px;
     text-align: right;
     min-width: 450px;
     font-size: 50px;
-    background-color: rgb(131, 164, 131);
+    background-color: rgb(19, 42, 71);
     max-height: 158px;
     margin-top: 25px;
 }
@@ -40,22 +41,26 @@ body {
 .calculatorDisplay p {
     padding-right: 15px;
     font-size: 75px;
-    color: black;
-    font-weight: bold;
+    color: white;
+    font-family: "Lexend Giga", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 
 }
 
 .AC {
-    background-color: rgb(182, 46, 46);
-
+    background-color: transparent;
+    color: hotpink
 }
 
 .enter {
-    background-color: rgb(221, 155, 33);    
+    background-image: linear-gradient(rgb(168, 35, 161),rgb(255, 166, 0));
+    color: white;
 }
 
 .operations {
-    background-color: darkslategrey;
+    background-color: rgb(36, 35, 35);
 }
 
 button {
@@ -64,16 +69,21 @@ button {
     font-size: 25px;
     border-radius: 10px;
     margin: 2px;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     color: white;
-    font-weight: bold;
+    font-weight: 50;
+    font-family: "Lexend Giga", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    outline: none;
+    border: 0px ;
 
 }
 
+
 button:hover {
-    background-color: white;
+
     transition-duration: 0.45s;
-    color: black;
 }
 .calculatorButtons {
    margin-bottom: 10px;
