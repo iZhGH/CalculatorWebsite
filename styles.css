@@ -22,6 +22,8 @@ body {
 }
 
 .calculatorDisplay {
+    width: 450px;
+    height: 158px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -31,7 +33,6 @@ body {
     border-color: white;
     margin: 10px;
     text-align: right;
-    min-width: 450px;
     font-size: 50px;
     background-color: rgb(19, 42, 71);
     max-height: 158px;
@@ -75,16 +76,15 @@ button {
     font-family: "Lexend Giga", serif;
     font-optical-sizing: auto;
     font-style: normal;
-    outline: none;
     border: 0px ;
 
 }
 
 
 button:hover {
-
-    transition-duration: 0.45s;
+    outline: auto;
 }
+
 .calculatorButtons {
    margin-bottom: 10px;
    
