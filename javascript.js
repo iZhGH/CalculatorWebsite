@@ -61,7 +61,7 @@ console.log(divide(3,3));
 
 
 function populateNumbers (content) {
-    if (currentValue.length <= 10) {
+    if (currentValue.length <= 7) {
         if (firstNumberEntered == true) {
             display.textContent = "";
             display.textContent += content;
